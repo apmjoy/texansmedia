@@ -208,6 +208,28 @@ footer{background:#04162f;color:#dbe4ef;padding:34px 0;font-size:14px}
   .tm-slide-copy{left:20px;right:20px;bottom:26px}
   .tm-slide-copy h3{font-size:21px}
 }
+
+/* --- Social media follow section --- */
+.social-follow{padding:68px 0 76px;background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)}
+.social-head{text-align:center;margin-left:auto;margin-right:auto}
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.social-card{text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:22px;padding:38px 26px 34px;min-height:410px;display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 10px 28px rgba(6,34,79,.06);transition:.2s}
+.social-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(6,34,79,.12)}
+.social-card h3{font-size:32px;margin:0 0 26px;color:#222;font-weight:500}
+.social-card p{font-size:18px;color:#222;margin:28px 0 26px}
+.social-icon{width:118px;height:118px;display:grid;place-items:center;flex:0 0 118px}
+.instagram-icon{border-radius:27px;background:radial-gradient(circle at 30% 105%,#ffd600 0 24%,#ff7a00 38%,#ff0169 61%,#d300c5 78%,#7638fa 100%);position:relative}
+.ig-inner{width:78px;height:78px;border:8px solid #fff;border-radius:24px;position:relative}
+.ig-lens{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:32px;height:32px;border:7px solid #fff;border-radius:50%}
+.ig-dot{position:absolute;right:10px;top:10px;width:10px;height:10px;border-radius:50%;background:#fff}
+.facebook-icon{background:#1877f2;color:#fff;border-radius:50%;font:bold 105px/1 Arial,Helvetica,sans-serif;padding-top:18px;overflow:hidden}
+.youtube-icon{width:132px;height:88px;flex-basis:88px;border-radius:22px;background:#ff0000;position:relative;margin-top:14px;margin-bottom:16px}
+.youtube-icon span{width:0;height:0;border-top:18px solid transparent;border-bottom:18px solid transparent;border-left:29px solid #fff;margin-left:7px}
+.social-button{display:inline-flex;align-items:center;justify-content:center;min-width:145px;min-height:54px;padding:10px 24px;border-radius:10px;color:#fff;font-weight:900;font-size:18px}
+.ig-button{background:#e1306c}.fb-button{background:#1877f2}.yt-button{background:#ff0000}
+@media(max-width:850px){.social-grid{grid-template-columns:1fr}.social-card{min-height:360px}}
+@media(max-width:580px){.social-follow{padding:52px 0}.social-card{padding:30px 20px}.social-card h3{font-size:28px}}
+
 </style>
 </head>
 <body>
@@ -229,7 +251,7 @@ footer{background:#04162f;color:#dbe4ef;padding:34px 0;font-size:14px}
 <a href="#destinations">Destinations</a>
 <a href="#about">About</a>
 
-<a class="btn btn-red" href="https://www.youtube.com/@TexanMedia/featured" rel="noopener" target="_blank">YouTube</a>
+<a href="#social">Social</a><a class="btn btn-red" href="https://www.youtube.com/@TexanMedia/featured" rel="noopener" target="_blank">YouTube</a>
 </nav>
 </div>
 </header>
@@ -390,6 +412,42 @@ footer{background:#04162f;color:#dbe4ef;padding:34px 0;font-size:14px}
 </section>
 
 </main>
+
+<section class="social-follow" id="social">
+  <div class="wrap">
+    <div class="section-head social-head">
+      <span class="eyebrow">Stay Connected</span>
+      <h2>Follow Texan Media</h2>
+      <p>Follow the journey across Instagram, Facebook and YouTube.</p>
+    </div>
+
+    <div class="social-grid">
+      <a class="social-card" href="https://www.instagram.com/texanmedia/" target="_blank" rel="noopener">
+        <h3>Instagram</h3>
+        <div class="social-icon instagram-icon" aria-hidden="true">
+          <div class="ig-inner"><span class="ig-lens"></span><span class="ig-dot"></span></div>
+        </div>
+        <p>Follow Texan Media on Instagram</p>
+        <span class="social-button ig-button">Follow</span>
+      </a>
+
+      <a class="social-card" href="https://www.facebook.com/abraham.mathew.581730" target="_blank" rel="noopener">
+        <h3>Facebook</h3>
+        <div class="social-icon facebook-icon" aria-hidden="true">f</div>
+        <p>Follow Texan Media on Facebook</p>
+        <span class="social-button fb-button">Follow</span>
+      </a>
+
+      <a class="social-card" href="https://www.youtube.com/@TexanMedia/featured" target="_blank" rel="noopener">
+        <h3>YouTube</h3>
+        <div class="social-icon youtube-icon" aria-hidden="true"><span></span></div>
+        <p>Subscribe to Texan Media on YouTube</p>
+        <span class="social-button yt-button">Subscribe</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <footer>
 <div class="wrap footer-grid">
 <div>
