@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: refresh-latest-videos
@@ -25,8 +26,10 @@ jobs:
       - name: Fetch the latest channel videos
         run: node scripts/update-latest-videos.mjs
       - name: Save updates to the website
+        id: update
         run: |
           if git diff --quiet -- data/latest-videos.json; then
+            echo "updated=false" >> "$GITHUB_OUTPUT"
             echo "The website already has the latest videos."
             exit 0
           fi
@@ -35,3 +38,9 @@ jobs:
           git add data/latest-videos.json
           git commit -m "Refresh latest Texan Media videos"
           git push
+          echo "updated=true" >> "$GITHUB_OUTPUT"
+      - name: Rebuild the live site
+        if: steps.update.outputs.updated == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
