@@ -1,0 +1,37 @@
+name: Refresh latest Texan Media videos
+
+on:
+  schedule:
+    - cron: "0 9 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-latest-videos
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the website
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch the latest channel videos
+        run: node scripts/update-latest-videos.mjs
+      - name: Save updates to the website
+        run: |
+          if git diff --quiet -- data/latest-videos.json; then
+            echo "The website already has the latest videos."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/latest-videos.json
+          git commit -m "Refresh latest Texan Media videos"
+          git push

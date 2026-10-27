@@ -230,6 +230,23 @@ footer{background:#04162f;color:#dbe4ef;padding:34px 0;font-size:14px}
 @media(max-width:850px){.social-grid{grid-template-columns:1fr}.social-card{min-height:360px}}
 @media(max-width:580px){.social-follow{padding:52px 0}.social-card{padding:30px 20px}.social-card h3{font-size:28px}}
 
+
+/* Latest Shorts and videos */
+.latest-videos{background:var(--soft)}
+.shorts-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.short-card{display:block;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:18px;text-decoration:none;box-shadow:0 8px 24px rgba(6,34,79,.07);transition:transform .2s ease,box-shadow .2s ease}
+.short-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.short-thumb{position:relative;aspect-ratio:9/12;background:linear-gradient(145deg,#d8e6f8,#fde6e9);overflow:hidden}
+.short-thumb img{width:100%;height:100%;object-fit:cover}
+.short-play{position:absolute;left:50%;top:50%;display:grid;place-items:center;width:54px;height:54px;padding-left:4px;border-radius:50%;background:var(--red);color:#fff;font-size:20px;transform:translate(-50%,-50%);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.short-card-body{padding:16px}
+.short-label{color:var(--red);font-size:11px;font-weight:900;letter-spacing:.12em}
+.short-card h3{display:-webkit-box;overflow:hidden;margin:6px 0 12px;color:var(--navy);font-size:17px;line-height:1.35;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.short-watch{color:var(--red);font-size:13px;font-weight:800}
+.shorts-more{display:flex;justify-content:center;margin-top:28px}
+@media(max-width:980px){.shorts-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:680px){.shorts-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.short-card-body{padding:12px}.short-card h3{font-size:15px}}
+
 </style>
 </head>
 <body>
@@ -248,6 +265,7 @@ footer{background:#04162f;color:#dbe4ef;padding:34px 0;font-size:14px}
 <nav class="navlinks" id="navLinks">
 <a href="#home">Home</a>
 <a href="#videos">Videos</a>
+<a href="#shorts">Shorts</a>
 <a href="#destinations">Destinations</a>
 <a href="#about">About</a>
 
@@ -319,6 +337,14 @@ footer{background:#04162f;color:#dbe4ef;padding:34px 0;font-size:14px}
 
 </div>
 </section>
+<section class="latest-videos" id="shorts"><div class="wrap"><div class="section-head"><span class="eyebrow">Fresh from YouTube</span><h2>New Shorts &amp; videos.</h2><p>Catch the latest travel moments from Texan Media, refreshed every week.</p></div><div aria-live="polite" class="shorts-grid" id="latestVideos"><a class="short-card" href="https://www.youtube.com/watch?v=QYvQq4DTfhs" rel="noopener" target="_blank"><div class="short-thumb"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/QYvQq4DTfhs/hqdefault.jpg"/><span class="short-play" aria-hidden="true">▶</span></div><div class="short-card-body"><span class="short-label">TEXAN MEDIA</span><h3>Rose Garden - Munnar</h3><span class="short-watch">Watch on YouTube →</span></div></a>
+<a class="short-card" href="https://www.youtube.com/watch?v=KFzd4XiKMPU" rel="noopener" target="_blank"><div class="short-thumb"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/KFzd4XiKMPU/hqdefault.jpg"/><span class="short-play" aria-hidden="true">▶</span></div><div class="short-card-body"><span class="short-label">TEXAN MEDIA</span><h3>October 25, 2026</h3><span class="short-watch">Watch on YouTube →</span></div></a>
+<a class="short-card" href="https://www.youtube.com/watch?v=cWA8wsoa_Gs" rel="noopener" target="_blank"><div class="short-thumb"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/cWA8wsoa_Gs/hqdefault.jpg"/><span class="short-play" aria-hidden="true">▶</span></div><div class="short-card-body"><span class="short-label">TEXAN MEDIA</span><h3>Rose Garden, Munnar</h3><span class="short-watch">Watch on YouTube →</span></div></a>
+<a class="short-card" href="https://www.youtube.com/watch?v=iNnmf4WQOR4" rel="noopener" target="_blank"><div class="short-thumb"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/iNnmf4WQOR4/hqdefault.jpg"/><span class="short-play" aria-hidden="true">▶</span></div><div class="short-card-body"><span class="short-label">TEXAN MEDIA</span><h3>Pattaya - Thailand</h3><span class="short-watch">Watch on YouTube →</span></div></a>
+<a class="short-card" href="https://www.youtube.com/watch?v=NtgNAKPNojk" rel="noopener" target="_blank"><div class="short-thumb"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/NtgNAKPNojk/hqdefault.jpg"/><span class="short-play" aria-hidden="true">▶</span></div><div class="short-card-body"><span class="short-label">TEXAN MEDIA</span><h3>Walking Street Pattaya</h3><span class="short-watch">Watch on YouTube →</span></div></a>
+<a class="short-card" href="https://www.youtube.com/watch?v=uiO4tZE8yGo" rel="noopener" target="_blank"><div class="short-thumb"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/uiO4tZE8yGo/hqdefault.jpg"/><span class="short-play" aria-hidden="true">▶</span></div><div class="short-card-body"><span class="short-label">TEXAN MEDIA</span><h3>Bangkok After Darkness</h3><span class="short-watch">Watch on YouTube →</span></div></a>
+<a class="short-card" href="https://www.youtube.com/watch?v=pjmw8kylVR0" rel="noopener" target="_blank"><div class="short-thumb"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/pjmw8kylVR0/hqdefault.jpg"/><span class="short-play" aria-hidden="true">▶</span></div><div class="short-card-body"><span class="short-label">TEXAN MEDIA</span><h3>Discover the Blue</h3><span class="short-watch">Watch on YouTube →</span></div></a>
+<a class="short-card" href="https://www.youtube.com/watch?v=0fkcFO-W-hg" rel="noopener" target="_blank"><div class="short-thumb"><img alt="" loading="lazy" src="https://i.ytimg.com/vi/0fkcFO-W-hg/hqdefault.jpg"/><span class="short-play" aria-hidden="true">▶</span></div><div class="short-card-body"><span class="short-label">TEXAN MEDIA</span><h3>Drive in Beach</h3><span class="short-watch">Watch on YouTube →</span></div></a></div><div class="shorts-more"><a class="btn btn-red" href="https://www.youtube.com/@TexanMedia/shorts" rel="noopener" target="_blank">▶ View all Shorts</a></div></div></section>
 <section id="videos">
 <div class="wrap">
 <div class="section-head">
@@ -507,6 +533,32 @@ document.getElementById('contactForm').addEventListener('submit',e=>{
   slider.addEventListener('mouseenter',()=>clearInterval(timer));
   slider.addEventListener('mouseleave',restart);
   restart();
+})();
+</script>
+<script>
+(async function(){
+  const grid=document.getElementById('latestVideos');
+  if(!grid)return;
+  try{
+    const response=await fetch('data/latest-videos.json',{cache:'no-store'});
+    if(!response.ok)throw new Error('Video list is unavailable');
+    const items=await response.json();
+    if(!Array.isArray(items)||!items.length)return;
+    grid.replaceChildren(...items.slice(0,15).filter(item=>/^[\w-]{11}$/.test(item.id)).map(item=>{
+      const card=document.createElement('a');
+      card.className='short-card';
+      card.href='https://www.youtube.com/watch?v='+item.id;
+      card.target='_blank';card.rel='noopener';
+      const thumb=document.createElement('div');thumb.className='short-thumb';
+      const image=document.createElement('img');image.loading='lazy';image.alt='';image.src='https://i.ytimg.com/vi/'+item.id+'/hqdefault.jpg';thumb.append(image);
+      const play=document.createElement('span');play.className='short-play';play.setAttribute('aria-hidden','true');play.textContent='▶';thumb.append(play);
+      const body=document.createElement('div');body.className='short-card-body';
+      const label=document.createElement('span');label.className='short-label';label.textContent='TEXAN MEDIA';
+      const title=document.createElement('h3');title.textContent=item.title||'Texan Media video';
+      const watch=document.createElement('span');watch.className='short-watch';watch.textContent='Watch on YouTube →';
+      body.append(label,title,watch);card.append(thumb,body);return card;
+    }));
+  }catch(error){console.warn('Could not refresh the Texan Media video list.',error);}
 })();
 </script>
 </body>
